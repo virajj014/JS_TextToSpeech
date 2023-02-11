@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --col1: #7A6AAC;
+        --mybg1:#E7E2FB;
+    }
+
+    body {
+        background-color: var(--mybg1);
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 42px;
+        color: var(--col1);
+        margin-bottom: 40px;
+    }
+
+    textarea {
+        width: 600px;
+        height: 200px;
+        font-size: 18px;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid var(--col1);
+        margin-bottom: 40px;
+    }
+
+    #voice-select, #pitch-range, #rate-range {
+        width: 600px;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: 1px solid var(--col1);
+        padding-left: 10px;
+    }
+
+
+    .rangecontainer{
+        display:flex;
+        /* background-color: red; */
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #speak-button{
+        width: 200px;
+        height: 40px;
+        background-color: var(--col1);
+        color: white;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+
+    #speak-button:hover{
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px var(--col1);
+    }
+</style>
+
+<body>
+    <h1>Text-to-Speech Website</h1>
+    <textarea id="text-input"></textarea>
+    <br><br>
+    <label for="voice-select">Voice:</label>
+    <select id="voice-select">
+        <option value="num1">Voice no. 1</option>
+        <option value="num2">Voice no. 2</option>
+        <option value="num3">Voice no. 3</option>
+    </select>
+    <br><br>
+    <div
+  class="rangecontainer"
+    >
+        <label>Pitch:</label>
+        <input type="range" min="0" max="2" step="0.1" value="1" id="pitch-range" />
+    </div>
+    <br><br>
+    <div
+    class="rangecontainer"
+    >
+        <label>Rate:</label>
+        <input type="range" min="0" max="2" step="0.1" value="1" id="rate-range" />
+    </div>
+    <br><br>
+    <button id="speak-button">Speak</button>
+</body>
+
+</html>
